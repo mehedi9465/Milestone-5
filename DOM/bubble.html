@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Event Bubble Vai</h2>
+
+    <section id="bubbleSection">
+        <h2 id="bubbleHeader">Bubble vai list</h2>
+        <ul id="bubbleUl">
+            <li id="">Lorem ipsum</li>
+            <li id="">Lorem dspsum</li>
+            <li id="bubbleLi">Lorem sadghasgd</li>
+            <li id="">adsa askdjlsad</li>
+            <li id="">sadhk skajdas kfg</li>
+        </ul>
+    </section>
+
+
+    <script>
+        // section
+        document.getElementById('bubbleSection').addEventListener('click', function(event){
+            console.log('Section is CLicked');
+        });
+
+        // h1
+        document.getElementById('bubbleHeader').addEventListener('click', function(event){
+            console.log('H1 is CLicked');
+            event.stopPropagation();
+        });
+
+        // ul
+        document.getElementById('bubbleUl').addEventListener('click', function(event){
+            console.log('Ul is CLicked');
+        });
+
+        // Li
+        document.getElementById('bubbleLi').addEventListener('click', function(event){
+            console.log('Li is CLicked');
+            event.stopImmediatePropagation();
+        });
+
+        // Li
+        document.getElementById('bubbleLi').addEventListener('click', function(event){
+            console.log('Li is CLicked');
+        });
+
+        // Li
+        document.getElementById('bubbleLi').addEventListener('click', function(event){
+            console.log('Li is CLicked');
+        });
+
+        // Li
+        document.getElementById('bubbleLi').addEventListener('click', function(event){
+            console.log('Li is CLicked');
+        });
+
+        
+
+    </script>
+</body>
+</html>
